@@ -33,7 +33,7 @@ public class Persistencia {
     
     private static final String SQLInicio=("SELECT * FROM licenciaprofesores.administrador WHERE nombreU=? AND contrasenia=?");
     
-    private static final String SQLMostrar=("SELECT * FROM licenciaprofesores.profesores");
+    private static final String SQLMostrar=("SELECT * FROM profesores");
     
     public SQL cone = new SQL();
     public PreparedStatement ps;
@@ -160,8 +160,7 @@ public class Persistencia {
     List<Profesores> lista = new ArrayList<>();
 
     Connection con = cone.getConnection(); 
-    String sql = "SELECT * FROM profesores";
-    PreparedStatement ps = con.prepareStatement(sql);
+    PreparedStatement ps = con.prepareStatement(SQLMostrar);
     ResultSet rs = ps.executeQuery();
 
     while (rs.next()) {

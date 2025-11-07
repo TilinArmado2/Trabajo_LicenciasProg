@@ -37,6 +37,7 @@ FachadaProfesores pers = new FachadaProfesores();
         pswUsuario = new javax.swing.JPasswordField();
         btnIniciar = new javax.swing.JButton();
         btnRegistro = new javax.swing.JButton();
+        btnVolver = new javax.swing.JButton();
 
         jButton1.setText("jButton1");
 
@@ -66,6 +67,13 @@ FachadaProfesores pers = new FachadaProfesores();
             }
         });
 
+        btnVolver.setText("Volver");
+        btnVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -91,6 +99,10 @@ FachadaProfesores pers = new FachadaProfesores();
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(btnRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(32, 32, 32))))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnVolver)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -107,7 +119,9 @@ FachadaProfesores pers = new FachadaProfesores();
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnIniciar)
                     .addComponent(btnRegistro))
-                .addGap(59, 59, 59))
+                .addGap(30, 30, 30)
+                .addComponent(btnVolver)
+                .addContainerGap())
         );
 
         pack();
@@ -145,6 +159,12 @@ try {
                 Registro in = new Registro();
                 in.setVisible(true);
     }//GEN-LAST:event_btnRegistroActionPerformed
+
+    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+        dispose();
+                PrimerPantalla in = new PrimerPantalla();
+                in.setVisible(true);
+    }//GEN-LAST:event_btnVolverActionPerformed
 
     /**
      * @param args the command line arguments
@@ -185,6 +205,7 @@ try {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnIniciar;
     private javax.swing.JButton btnRegistro;
+    private javax.swing.JButton btnVolver;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
